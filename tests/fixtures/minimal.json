@@ -1,0 +1,10 @@
+{
+  "PROJECT_NAME": "tiny",
+  "PROJECT_ONE_LINER": "A tiny library.",
+  "RUNTIME_VERSIONS": "Node 22",
+  "CMD_INSTALL": "npm ci",
+  "CMD_TEST": "npm test",
+  "CMD_TEST_ONE": "npx vitest run src/a.test.ts",
+  "TEST_FILE_CONVENTION": "`*.test.ts` next to the source",
+  "EXAMPLE_TEST_PATH": "src/a.test.ts"
+}

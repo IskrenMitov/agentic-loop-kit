@@ -1,0 +1,29 @@
+schema: spec-driven
+
+# Project context every OpenSpec artifact sees. Keep it to the facts a spec writer needs and can't infer:
+# artifact language, target runtime/platform limits, where contracts live, how tests are written.
+# Example (replace):
+#   Write all artifacts in English. User-facing strings quoted in specs stay in German.
+#   Target runtime is Python 3.12; the public API under /v1 is frozen (contract: docs/api/contract.md).
+#   Tests are written before implementation (pytest, tests/**/test_*.py) and never hit the network.
+context: |
+  {{OPENSPEC_CONTEXT}}
+
+rules:
+  proposal:
+    - Keep it under 400 words and state what is out of scope.
+  specs:
+    - "Tag every requirement with its source: [TASK] (quote from the task), [REPO: path#Lnn] (existing code or doc), or [ASSUMED] (inferred, needs user confirmation)."
+    - Write scenarios as observable behavior (WHEN/THEN) that a test can assert without knowing the implementation.
+  tasks:
+    - Group tasks under "## <n>. <sub-task name>" headings, each an independent unit that can be built and reviewed on its own.
+    - Each group starts with a "Test behaviors:" list (numbered, observable) and a "Files:" line with the paths it touches.
+    - 'Mark dependencies between groups explicitly with "Depends on: <n>".'
+
+operations:
+  apply:
+    guidance:
+      - Implementation runs through the /task loop (test-writer, developer, reviewer); keep test summaries concise.
+  archive:
+    guidance:
+      - Before archiving, confirm every sub-task in loop.md is APPROVED{{ARCHIVE_GRAPH_STEP}}.

@@ -1,0 +1,17 @@
+{
+  "name": "agentic-loop-kit",
+  "owner": {
+    "name": "Iskren Mitov"
+  },
+  "metadata": {
+    "description": "Set up a spec-driven, test-first multi-agent delivery loop in any repository."
+  },
+  "plugins": [
+    {
+      "name": "agentic-loop",
+      "source": "./",
+      "description": "Interviews you about your project and installs the /task loop (researcher, spec-writer, test-writer, developer, reviewer, feedback-curator), a test-lock hook, OpenSpec config and team rules into your repo.",
+      "version": "0.1.0"
+    }
+  ]
+}

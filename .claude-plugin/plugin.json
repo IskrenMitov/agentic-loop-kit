@@ -1,0 +1,11 @@
+{
+  "name": "agentic-loop",
+  "version": "0.1.0",
+  "description": "Installs a spec-driven, test-first multi-agent delivery loop into your repository, adapted to your project.",
+  "author": {
+    "name": "Iskren Mitov"
+  },
+  "repository": "https://github.com/IskrenMitov/agentic-loop-kit",
+  "license": "MIT",
+  "keywords": ["agents", "workflow", "tdd", "openspec", "code-review"]
+}
